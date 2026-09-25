@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raj Kumar | DevOps Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+        }
+
+        /* Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 8%;
+
+            background: #111827;
+            color: white;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        /* Common */
+        section {
+            padding: 90px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 45px;
+        }
+
+        /* Hero */
+        #home {
+            min-height: 90vh;
+
+            display: flex;
+            align-items: center;
+
+            background: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero-content .small {
+            color: #2563eb;
+            font-size: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            margin: 15px 0;
+        }
+
+        .hero-content h2 {
+            font-size: 30px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+
+            margin-top: 30px;
+            padding: 13px 25px;
+
+            background: #2563eb;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        /* About */
+        #about {
+            background: #f5f7fa;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+
+            text-align: center;
+
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* Skills */
+        #skills {
+            background: white;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,
+                    minmax(220px, 1fr));
+
+            gap: 25px;
+        }
+
+        .card {
+            background: #f8fafc;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.7;
+        }
+
+        /* Projects */
+        #projects {
+            background: #f5f7fa;
+        }
+
+        /* Contact */
+        #contact {
+            background: white;
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: auto;
+
+            text-align: center;
+
+            line-height: 2;
+            font-size: 18px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 25px;
+
+            text-align: center;
+
+            background: #111827;
+            color: white;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-content h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+
+        <div class="logo">
+            Raj Kumar
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home">
+
+        <div class="hero-content">
+
+            <p class="small">
+                Hello, I'm
+            </p>
+
+            <h1>
+                Raj Kumar
+            </h1>
+
+            <h2>
+                DevOps Engineer
+            </h2>
+
+            <p>
+                I build scalable cloud infrastructure,
+                CI/CD pipelines, Kubernetes platforms and
+                automated deployment systems.
+            </p>
+
+            <a href="#projects" class="btn">
+                View My Projects
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <div class="about-content">
+
+            <p>
+                I am a Software and DevOps Engineer with
+                experience in cloud computing, automation,
+                containerization and application development.
+            </p>
+
+            <br>
+
+            <p>
+                I work with AWS, Azure, Docker, Kubernetes,
+                Terraform, GitHub Actions, Jenkins, Python,
+                Linux and modern application technologies.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="section-title">
+            Skills
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Cloud</h3>
+
+                <p>
+                    AWS, Azure, EC2, S3, VPC, EKS,
+                    IAM, RDS, Azure VM, VNet
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>DevOps</h3>
+
+                <p>
+                    Docker, Kubernetes, Terraform,
+                    Jenkins, GitHub Actions, GitOps,
+                    ArgoCD
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Programming</h3>
+
+                <p>
+                    Python, Bash, Node.js, React,
+                    FastAPI
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Monitoring</h3>
+
+                <p>
+                    Prometheus, Grafana, Kubernetes
+                    monitoring and application logging
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2 class="section-title">
+            Projects
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    CI/CD Pipeline
+                </h3>
+
+                <p>
+                    Production CI/CD pipeline using
+                    GitHub Actions, Docker and automated
+                    deployment.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Kubernetes Platform
+                </h3>
+
+                <p>
+                    Kubernetes platform with namespaces,
+                    RBAC, deployments, services and
+                    monitoring.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Cloud Infrastructure
+                </h3>
+
+                <p>
+                    Infrastructure automation using
+                    Terraform and AWS/Azure cloud services.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    AI Dynamic Route Optimization
+                </h3>
+
+                <p>
+                    Fleet management solution for dynamic
+                    route optimization, live tracking,
+                    traffic and ETA analysis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+
+        <div class="contact-box">
+
+            <p>
+                📧 Email: raj@example.com
+            </p>
+
+            <p>
+                💻 GitHub: github.com/yourusername
+            </p>
+
+            <p>
+                🔗 LinkedIn: linkedin.com/in/yourusername
+            </p>
+
+            <p>
+                📍 India
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Raj Kumar. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
