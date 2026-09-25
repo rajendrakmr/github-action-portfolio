@@ -3,6 +3,8 @@ name: Portfolio
 on:
     push:
         branches: [rajendra]
+        paths:
+            - '*.html'
     workflow_dispatch:
 permissions:
   contents: read
@@ -21,8 +23,18 @@ jobs:
             - name: Setup Github pages
               uses: actions/configure-pages@v6
 
-            - name: Upload static files
+            - name: Create Site Directory
+              run: |
+                mkdir -p _site
+                cp index.html _site/index.html
+                echo "===== SITE CONTENT ====="
+                ls -la _site
+                echo "========================"
+
+            - name: Upload Static Files
               uses: actions/upload-pages-artifact@v5
+              with:
+                path: ./_site 
 
             - name: Deploy to Github pages
               uses: actions/deploy-pages@v3
