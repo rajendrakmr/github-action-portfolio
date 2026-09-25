@@ -2,7 +2,8 @@ name: Portfolio
 
 on:
     push:
-        branches: [rajendra]
+        branches: [main]
+    workflow_dispatch:
 permissions:
   contents: read
   pages: write
