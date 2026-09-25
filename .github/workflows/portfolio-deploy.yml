@@ -2,7 +2,7 @@ name: Portfolio
 
 on:
     push:
-        branches: [main]
+        branches: [rajendra]
     workflow_dispatch:
 permissions:
   contents: read
@@ -16,7 +16,7 @@ jobs:
             url: ${{steps.deployment.outputs.page_url}}
         steps:
             - name: Checkout Code
-              uses: actions/chckout@v7
+              uses: actions/checkout@v7
         
             - name: Setup Github pages
               uses: actions/configure-pages@v6
