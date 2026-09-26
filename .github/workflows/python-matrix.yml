@@ -1,0 +1,25 @@
+name: Python Matrix
+
+on:
+    push:
+        branches: [rajendra] 
+    workflow_dispatch:
+
+jobs:
+    validate:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v7
+
+            - name: Setup Python
+              uses: actions/setup-python@v7
+              with:
+                python-version: '3.13'
+
+            - name: Install dependency
+              run: pip install -r requirements.txt
+
+            
+
+            
