@@ -3,267 +3,280 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Uptime Labs — IT Support & Engineering</title>
+<title>Rajendra Kumar Marandi — DevOps & Software Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0F1B2B; --ink-2:#16273D; --ink-3:#1E3350;
-    --paper:#F2F1EC;
-    --amber:#E8A33D; --amber-dim: rgba(232,163,61,0.14);
-    --teal:#4C8577;
-    --line: rgba(242,241,236,0.14);
+    --ink:#0F1B2B; --ink-2:#16273D; --ink-3:#1E3350; --paper:#F2F1EC;
+    --amber:#E8A33D; --amber-dim:rgba(232,163,61,0.14); --teal:#4C8577;
+    --line:rgba(242,241,236,0.14);
     box-sizing:border-box;
-    padding-top: env(safe-area-inset-top,0px);
-    padding-bottom: env(safe-area-inset-bottom,0px);
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
   }
+  :root:not([data-theme="light"]){color-scheme:dark;}
   *{box-sizing:inherit; margin:0; padding:0;}
-  html{scroll-padding-top: env(safe-area-inset-top,0px); scroll-behavior:smooth;}
-  body{
-    background:var(--ink); color:var(--paper);
-    font-family:'IBM Plex Sans', system-ui, sans-serif;
-    line-height:1.5; -webkit-font-smoothing:antialiased; overflow-x:hidden;
-  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth;}
+  body{background:var(--ink); color:var(--paper); font-family:'IBM Plex Sans',system-ui,sans-serif; line-height:1.5; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
   .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
-  @media (max-width:600px){ .wrap{padding:0 20px;} }
+  @media (max-width:600px){.wrap{padding:0 20px;}}
   a{color:inherit;}
   .mono{font-family:'IBM Plex Mono',monospace;}
 
-  header.nav{
-    position:sticky; top:env(safe-area-inset-top,0px); z-index:10;
-    background:rgba(15,27,43,0.86); backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
+  header.nav{position:sticky; top:env(safe-area-inset-top,0px); z-index:10; background:rgba(15,27,43,0.86); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
   .nav .wrap{display:flex; align-items:center; justify-content:space-between; height:72px;}
-  .brand{font-weight:600; font-size:1.1rem; letter-spacing:.01em; display:flex; align-items:center; gap:9px;}
+  .brand{font-weight:600; font-size:1.05rem; display:flex; align-items:center; gap:9px;}
   .brand .dot{width:8px; height:8px; border-radius:50%; background:var(--amber); box-shadow:0 0 0 4px var(--amber-dim);}
   .nav ul{display:flex; gap:30px; list-style:none; font-size:.92rem;}
   .nav ul a{opacity:.75; text-decoration:none; transition:opacity .15s;}
   .nav ul a:hover{opacity:1;}
   .nav-cta{font-size:.88rem; padding:10px 18px; background:var(--amber); color:var(--ink); font-weight:600; border-radius:3px; text-decoration:none;}
-  @media (max-width:760px){ .nav ul{display:none;} }
+  @media (max-width:760px){.nav ul{display:none;}}
 
-  /* HERO */
   .hero{position:relative; padding:110px 0 90px; border-bottom:1px solid var(--line); overflow:hidden;}
-  .hero::before{
-    content:''; position:absolute; top:-200px; right:-160px; width:600px; height:600px; border-radius:50%;
-    background:radial-gradient(circle at center, rgba(232,163,61,0.16), transparent 68%);
-    pointer-events:none;
-  }
-  .hero::after{
-    content:''; position:absolute; bottom:-260px; left:-160px; width:520px; height:520px; border-radius:50%;
-    background:radial-gradient(circle at center, rgba(76,133,119,0.16), transparent 68%);
-    pointer-events:none;
-  }
+  .hero::before{content:''; position:absolute; top:-200px; right:-160px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle at center,rgba(232,163,61,0.16),transparent 68%); pointer-events:none;}
+  .hero::after{content:''; position:absolute; bottom:-260px; left:-160px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle at center,rgba(76,133,119,0.16),transparent 68%); pointer-events:none;}
   .eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:.82rem; opacity:.7; margin-bottom:22px;}
   .eyebrow .bar{width:22px; height:1px; background:var(--amber);}
-  h1{font-size:clamp(2.6rem, 6vw, 4.4rem); font-weight:600; line-height:1.05; letter-spacing:-0.015em; max-width:16ch; position:relative;}
+  h1{font-size:clamp(2.4rem,6vw,4.2rem); font-weight:600; line-height:1.05; letter-spacing:-0.015em; max-width:18ch; position:relative;}
   h1 em{font-style:normal; color:var(--amber);}
-  .hero p.sub{margin-top:26px; font-size:1.15rem; max-width:52ch; opacity:.82; position:relative;}
+  .hero p.sub{margin-top:26px; font-size:1.12rem; max-width:58ch; opacity:.82; position:relative;}
   .hero-actions{margin-top:38px; display:flex; gap:16px; flex-wrap:wrap; position:relative;}
   .btn-primary{background:var(--amber); color:var(--ink); font-weight:600; padding:15px 28px; border-radius:3px; text-decoration:none; font-size:.98rem;}
   .btn-ghost{padding:15px 28px; border:1px solid var(--line); border-radius:3px; text-decoration:none; font-size:.98rem; opacity:.85;}
-
   .stat-row{margin-top:76px; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden; position:relative;}
-  @media (max-width:760px){ .stat-row{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:760px){.stat-row{grid-template-columns:repeat(2,1fr);}}
   .stat{background:var(--ink); padding:26px 24px;}
   .stat .num{font-size:1.9rem; font-weight:600; color:var(--amber);}
   .stat .lbl{font-size:.82rem; opacity:.65; margin-top:6px;}
 
-  /* SECTION HEADERS */
   section{padding:96px 0; border-bottom:1px solid var(--line);}
   .sec-head{display:flex; justify-content:space-between; align-items:end; gap:20px; flex-wrap:wrap;}
-  .sec-head h2{font-size:clamp(1.7rem,3.4vw,2.3rem); font-weight:600; max-width:20ch;}
+  .sec-head h2{font-size:clamp(1.7rem,3.4vw,2.3rem); font-weight:600; max-width:22ch;}
   .sec-head p{font-size:.98rem; opacity:.68; max-width:36ch;}
 
-  /* SERVICES */
-  .svc-grid{margin-top:52px; display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden;}
-  @media (max-width:820px){ .svc-grid{grid-template-columns:1fr 1fr;} }
-  @media (max-width:560px){ .svc-grid{grid-template-columns:1fr;} }
-  .svc{background:var(--ink); padding:34px 28px; transition:background .15s;}
-  .svc:hover{background:var(--ink-2);}
-  .svc .tag{font-size:.72rem; color:var(--amber); letter-spacing:.02em;}
-  .svc h3{margin-top:14px; font-size:1.18rem; font-weight:600;}
-  .svc p{margin-top:12px; font-size:.93rem; opacity:.72; max-width:34ch;}
+  .skill-grid{margin-top:52px; display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  @media (max-width:820px){.skill-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.skill-grid{grid-template-columns:1fr;}}
+  .skill{background:var(--ink); padding:30px 28px; transition:background .15s;}
+  .skill:hover{background:var(--ink-2);}
+  .skill .tag{font-size:.72rem; color:var(--amber);}
+  .skill h3{margin-top:12px; font-size:1.1rem; font-weight:600;}
+  .skill p{margin-top:10px; font-size:.9rem; opacity:.75;}
 
-  /* WORK */
+  .xp{margin-top:52px;}
+  .xp-item{display:grid; grid-template-columns:200px 1fr; gap:32px; padding:32px 0; border-top:1px solid var(--line);}
+  .xp-item:last-child{border-bottom:1px solid var(--line);}
+  @media (max-width:700px){.xp-item{grid-template-columns:1fr; gap:10px;}}
+  .xp-when{font-size:.8rem; color:var(--teal);}
+  .xp-item h3{font-size:1.15rem; font-weight:600;}
+  .xp-item .co{font-size:.9rem; opacity:.65; margin-top:2px;}
+  .xp-item ul{margin-top:14px; padding-left:18px; font-size:.92rem; opacity:.78;}
+  .xp-item li{margin-top:7px;}
+
   .work-grid{margin-top:52px; display:grid; grid-template-columns:1fr 1fr; gap:24px;}
-  @media (max-width:820px){ .work-grid{grid-template-columns:1fr;} }
-  .case{border:1px solid var(--line); border-radius:8px; overflow:hidden; background:var(--ink-2);}
-  .case-top{padding:30px 30px 0; }
-  .case .platform{font-size:.76rem; color:var(--teal); letter-spacing:.02em;}
-  .case h3{margin-top:12px; font-size:1.3rem; font-weight:600;}
-  .case p{margin-top:12px; font-size:.93rem; opacity:.75; max-width:42ch;}
-  .case-tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;}
+  @media (max-width:820px){.work-grid{grid-template-columns:1fr;}}
+  .case{border:1px solid var(--line); border-radius:8px; padding:30px; background:var(--ink-2);}
+  .case .platform{font-size:.74rem; color:var(--teal);}
+  .case h3{margin-top:12px; font-size:1.2rem; font-weight:600;}
+  .case p{margin-top:12px; font-size:.92rem; opacity:.75;}
+  .case-tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:18px;}
   .case-tags span{font-size:.74rem; padding:6px 10px; border:1px solid var(--line); border-radius:20px; opacity:.75;}
-  .case-visual{margin-top:26px; height:150px; background:
-      repeating-linear-gradient(135deg, var(--ink-3) 0 2px, transparent 2px 22px);
-      position:relative; border-top:1px solid var(--line);
-  }
-  .case-visual .chip{position:absolute; bottom:20px; left:30px; background:var(--ink); border:1px solid var(--line); border-radius:6px; padding:10px 14px; font-size:.78rem; display:flex; align-items:center; gap:8px;}
-  .case-visual .chip::before{content:''; width:7px; height:7px; border-radius:50%; background:var(--amber);}
+  .case .metric{margin-top:18px; font-size:.82rem; color:var(--amber); display:flex; align-items:center; gap:8px;}
+  .case .metric::before{content:''; width:7px; height:7px; border-radius:50%; background:var(--amber);}
 
-  /* TEAM */
-  .team-grid{margin-top:52px; display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
-  @media (max-width:900px){ .team-grid{grid-template-columns:repeat(2,1fr);} }
-  @media (max-width:520px){ .team-grid{grid-template-columns:1fr;} }
-  .member{border:1px solid var(--line); border-radius:8px; padding:28px 24px; background:var(--ink-2);}
-  .role-mark{width:38px; height:38px; border-radius:50%; border:1.5px solid var(--amber); display:flex; align-items:center; justify-content:center; font-size:.8rem; color:var(--amber);}
-  .member h3{margin-top:18px; font-size:1.05rem; font-weight:600;}
-  .member .role{font-size:.85rem; color:var(--teal); margin-top:3px;}
-  .member p{margin-top:12px; font-size:.87rem; opacity:.7;}
+  .edu{margin-top:40px; border:1px solid var(--line); border-radius:8px; padding:30px; background:var(--ink-2); max-width:760px;}
+  .edu h3{font-size:1.1rem; font-weight:600;}
+  .edu .meta{font-size:.85rem; color:var(--teal); margin-top:4px;}
+  .edu p{margin-top:12px; font-size:.92rem; opacity:.75;}
 
-  /* PROCESS */
-  .process{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:52px;}
-  @media (max-width:820px){ .process{grid-template-columns:1fr 1fr;} }
-  @media (max-width:520px){ .process{grid-template-columns:1fr;} }
-  .step{position:relative; padding-top:20px; border-top:2px solid var(--amber);}
-  .step .n{font-size:.78rem; opacity:.55;}
-  .step h3{margin-top:12px; font-size:1.05rem; font-weight:600;}
-  .step p{margin-top:10px; font-size:.87rem; opacity:.7;}
-
-  /* CONTACT */
   .contact-inner{display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:center;}
-  @media (max-width:800px){ .contact-inner{grid-template-columns:1fr;} }
+  @media (max-width:800px){.contact-inner{grid-template-columns:1fr;}}
   .contact h2{font-size:clamp(1.9rem,4vw,2.5rem); font-weight:600; max-width:16ch; line-height:1.15;}
   .contact p{margin-top:18px; opacity:.78; max-width:42ch; font-size:1.02rem;}
   .contact-card{background:var(--ink-2); border:1px solid var(--line); border-radius:8px; padding:32px;}
-  .contact-card .row{display:flex; justify-content:space-between; padding:13px 0; border-top:1px solid var(--line); font-size:.94rem;}
+  .contact-card .row{display:flex; justify-content:space-between; gap:16px; padding:13px 0; border-top:1px solid var(--line); font-size:.94rem;}
   .contact-card .row:first-child{border-top:none;}
   .contact-card .row span:first-child{opacity:.6;}
+  .contact-card .row span:last-child{text-align:right; overflow-wrap:anywhere;}
   .contact-card a.cta-inline{display:block; margin-top:22px; text-align:center; background:var(--amber); color:var(--ink); font-weight:600; padding:14px; border-radius:4px; text-decoration:none;}
   footer{padding:30px 0; font-size:.82rem; opacity:.5; text-align:center;}
-
-  /* TRUST BAR */
-  .trust{padding:36px 0; border-bottom:1px solid var(--line);}
-  .trust .wrap{display:flex; align-items:center; gap:36px; flex-wrap:wrap;}
-  .trust .lbl{font-size:.78rem; opacity:.5; white-space:nowrap;}
-  .trust .chips{display:flex; gap:14px; flex-wrap:wrap;}
-  .trust .chips span{font-size:.86rem; opacity:.55; padding:8px 0;}
-
-  /* TESTIMONIALS */
-  .quote-grid{margin-top:52px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
-  @media (max-width:900px){ .quote-grid{grid-template-columns:1fr;} }
-  .quote{border:1px solid var(--line); border-radius:8px; padding:30px; background:var(--ink-2); display:flex; flex-direction:column; justify-content:space-between;}
-  .quote .mark{font-size:2.2rem; color:var(--amber); line-height:1; font-family:Georgia,serif;}
-  .quote p.q{margin-top:14px; font-size:.96rem; opacity:.85; line-height:1.55;}
-  .quote .who{margin-top:22px; font-size:.85rem; opacity:.6; border-top:1px solid var(--line); padding-top:16px;}
-  .quote .who strong{color:var(--paper); opacity:1; display:block; font-size:.9rem;}
-
-  /* FAQ */
-  .faq-list{margin-top:52px; max-width:760px;}
-  .faq-item{border-top:1px solid var(--line); padding:24px 0;}
-  .faq-item:last-child{border-bottom:1px solid var(--line);}
-  .faq-item summary{cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:1.02rem; font-weight:500;}
-  .faq-item summary::-webkit-details-marker{display:none;}
-  .faq-item summary .plus{font-family:'IBM Plex Mono',monospace; color:var(--amber); font-size:1.1rem; transition:transform .2s;}
-  .faq-item[open] summary .plus{transform:rotate(45deg);}
-  .faq-item p{margin-top:14px; font-size:.92rem; opacity:.7; max-width:60ch;}
 </style>
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap">
-    <div class="brand"><span class="dot"></span>Uptime Labs</div>
+    <div class="brand"><span class="dot"></span>Rajendra Marandi</div>
     <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#team">Team</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="nav-cta" href="#contact">Start a project</a>
+    <a class="nav-cta" href="#contact">Get in touch</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow"><span class="bar"></span>IT support &amp; product engineering studio</div>
-    <h1>The whole stack, run by one team<br>you actually <em>talk to.</em></h1>
-    <p class="sub">Backend, frontend, product design, and infrastructure — four disciplines under one roof, so nothing gets lost between vendors. Support when things break, engineering when you're building something new.</p>
+    <div class="eyebrow mono"><span class="bar"></span>DevOps &amp; Software Engineer · Kolkata, India</div>
+    <h1>Infrastructure that stays <em>up,</em> shipped by code.</h1>
+    <p class="sub">6+ years building cloud-native systems: Kubernetes on AWS EKS, GitOps CI/CD, Terraform automation and Prometheus/Grafana observability — backed by a full-stack background in FastAPI, React and Node.js.</p>
     <div class="hero-actions">
-      <a class="btn-primary" href="#contact">Book a call</a>
-      <a class="btn-ghost" href="#work">See our work</a>
+      <a class="btn-primary" href="#projects">See projects</a>
+      <a class="btn-ghost" href="#contact">Contact me</a>
     </div>
     <div class="stat-row">
-      <div class="stat"><div class="num">&lt;15m</div><div class="lbl">Avg. support response time</div></div>
-      <div class="stat"><div class="num">99.97%</div><div class="lbl">Uptime maintained</div></div>
-      <div class="stat"><div class="num">4</div><div class="lbl">Disciplines, one team</div></div>
-      <div class="stat"><div class="num">24/7</div><div class="lbl">On call for retained clients</div></div>
+      <div class="stat"><div class="num">6+</div><div class="lbl">Years of experience</div></div>
+      <div class="stat"><div class="num">99.9%</div><div class="lbl">Uptime on production EKS</div></div>
+      <div class="stat"><div class="num">60%</div><div class="lbl">Faster deployments</div></div>
+      <div class="stat"><div class="num">40%</div><div class="lbl">Faster incident resolution</div></div>
     </div>
   </div>
 </section>
 
-<section class="trust">
-  <div class="wrap">
-    <span class="lbl">BUILT FOR TEAMS RUNNING ON —</span>
-    <div class="chips">
-      <span class="mono">Clinics & healthcare</span>
-      <span class="mono">Retail & e-commerce</span>
-      <span class="mono">SaaS startups</span>
-      <span class="mono">Local service businesses</span>
-    </div>
-  </div>
-</section>
-
-<section id="services">
+<section id="skills">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Everything between a broken laptop and a broken deploy.</h2>
-      <p>Pick a single service, or hand us the whole stack.</p>
+      <h2>The toolchain I work with.</h2>
+      <p>From commit to cluster to dashboard.</p>
     </div>
-    <div class="svc-grid">
-      <div class="svc"><div class="tag mono">SUPPORT</div><h3>Helpdesk & IT support</h3><p>Troubleshooting, device setup, network and access issues — handled fast and documented properly.</p></div>
-      <div class="svc"><div class="tag mono">BUILD</div><h3>Product engineering</h3><p>Frontend and backend development for web and mobile, built and maintained by the same team.</p></div>
-      <div class="svc"><div class="tag mono">DESIGN</div><h3>UI/UX design</h3><p>Interfaces designed around how your users actually work, not just how the data model looks.</p></div>
-      <div class="svc"><div class="tag mono">INFRA</div><h3>Servers & infrastructure</h3><p>Deployment, monitoring and backups — the part clients notice only when it's missing.</p></div>
-      <div class="svc"><div class="tag mono">SECURITY</div><h3>Access & security hygiene</h3><p>Sensible permissions and patching, so small teams aren't exposed like large ones.</p></div>
-      <div class="svc"><div class="tag mono">ADVISORY</div><h3>Ongoing IT partner</h3><p>A retained team on call for whatever comes up, instead of a new vendor for every problem.</p></div>
+    <div class="skill-grid">
+      <div class="skill"><div class="tag mono">CI/CD</div><h3>DevOps &amp; delivery</h3><p>ArgoCD, Jenkins, GitHub Actions, AWS CodePipeline, CodeBuild, CodeDeploy</p></div>
+      <div class="skill"><div class="tag mono">IAC</div><h3>Infrastructure as Code</h3><p>Terraform, Ansible</p></div>
+      <div class="skill"><div class="tag mono">CLOUD</div><h3>Cloud platforms</h3><p>AWS (EC2, S3, RDS, IAM, VPC, EKS), Azure (VMs, VNet)</p></div>
+      <div class="skill"><div class="tag mono">CONTAINERS</div><h3>Orchestration</h3><p>Docker, Kubernetes, Helm</p></div>
+      <div class="skill"><div class="tag mono">OBSERVABILITY</div><h3>Monitoring &amp; logging</h3><p>Prometheus, Grafana, CloudWatch</p></div>
+      <div class="skill"><div class="tag mono">SECURITY</div><h3>Security &amp; quality</h3><p>SonarQube, Trivy, OWASP</p></div>
+      <div class="skill"><div class="tag mono">CODE</div><h3>Programming &amp; scripting</h3><p>Python, Bash, Groovy</p></div>
+      <div class="skill"><div class="tag mono">FULL STACK</div><h3>Backend &amp; frontend</h3><p>FastAPI, Node.js, Express.js, Laravel, React.js, React Native, Next.js</p></div>
+      <div class="skill"><div class="tag mono">DATA &amp; VCS</div><h3>Databases &amp; version control</h3><p>MySQL, DynamoDB · Git, GitHub, SVN</p></div>
     </div>
   </div>
 </section>
 
-<section id="work">
+<section id="experience">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Recent builds from the team.</h2>
-      <p>A sample of what backend, frontend, design, and infra look like together.</p>
+      <h2>Where I've worked.</h2>
+      <p>Backend roots, now running production on Kubernetes.</p>
+    </div>
+    <div class="xp">
+      <div class="xp-item">
+        <div class="xp-when mono">Jul 2022 – Present</div>
+        <div>
+          <h3>Software Engineer, DevOps &amp; Cloud</h3>
+          <div class="co">DCG Data-Core Systems India Pvt Ltd</div>
+          <ul>
+            <li>Operate production AWS EKS clusters (3+ nodes, 5+ microservices) at 99.9% uptime through proactive monitoring and incident response.</li>
+            <li>Built GitOps CI/CD pipelines with Jenkins and ArgoCD for consistent, automated deployments across environments.</li>
+            <li>Automated provisioning with Terraform, cutting manual effort by 60% and eliminating configuration drift.</li>
+            <li>Set up Prometheus and Grafana observability, reducing incident detection and resolution time by 40%.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="xp-item">
+        <div class="xp-when mono">Dec 2020 – Jun 2022</div>
+        <div>
+          <h3>Jr. Backend Developer</h3>
+          <div class="co">Pollysys Global Solutions</div>
+          <ul>
+            <li>Optimized database queries and backend architecture, decreasing response latency by 35%.</li>
+            <li>Resolved production issues and improved service design to boost uptime and stability.</li>
+            <li>Contributed to a full e-commerce application from backend design through deployment.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="xp-item">
+        <div class="xp-when mono">Aug 2021 – Oct 2021</div>
+        <div>
+          <h3>Software Developer (Backend)</h3>
+          <div class="co">Bookingjini Labs</div>
+          <ul>
+            <li>Built a centralized hotel booking system integrating OTA APIs (Agoda, Airbnb) for real-time inventory sync and reservations.</li>
+            <li>Optimized queries and backend logic to improve response time and stability.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="xp-item">
+        <div class="xp-when mono">Jan 2020 – Dec 2020</div>
+        <div>
+          <h3>Web Developer</h3>
+          <div class="co">Hachiweb, Dehradun</div>
+          <ul>
+            <li>Designed and integrated RESTful APIs and payment gateways (PayPal, Cashfree).</li>
+            <li>Built and maintained PHP Laravel web applications, improving performance by 20%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Selected projects.</h2>
+      <p>Infrastructure-heavy builds and full-stack apps.</p>
     </div>
     <div class="work-grid">
       <div class="case">
-        <div class="case-top">
-          <div class="platform mono">REACT NATIVE · MOBILE</div>
-          <h3>Doctor appointment platform</h3>
-          <p>A patient-facing app for finding doctors by specialty and booking appointments, with a live dashboard and RTK Query–powered data layer underneath.</p>
-          <div class="case-tags"><span>React Native</span><span>RTK Query</span><span>Booking flow</span></div>
-        </div>
-        <div class="case-visual"><div class="chip">FindDoctorScreen → BookAppointment</div></div>
+        <div class="platform mono">AWS EKS · GITOPS</div>
+        <h3>E-Commerce 3-Tier Application</h3>
+        <p>Production-grade React, Node.js and MySQL stack on EKS with Docker and Kubernetes, delivered via Jenkins + Argo CD and Terraform.</p>
+        <div class="case-tags"><span>EKS</span><span>Terraform</span><span>Jenkins</span><span>Argo CD</span></div>
+        <div class="metric">99.9% availability · 60% faster deploys · 2-min rollback</div>
       </div>
       <div class="case">
-        <div class="case-top">
-          <div class="platform mono">NEXT.JS · WEB</div>
-          <h3>Hospital management system</h3>
-          <p>An admin web app for hospital staff — authentication, an operations dashboard, and day-to-day management tooling built on Next.js and Bootstrap.</p>
-          <div class="case-tags"><span>Next.js</span><span>Bootstrap</span><span>Admin dashboard</span></div>
-        </div>
-        <div class="case-visual"><div class="chip">Admin dashboard · AuthProvider</div></div>
+        <div class="platform mono">MULTI-TENANT SAAS</div>
+        <h3>SaaS School Management System</h3>
+        <p>Multi-tenant ERP on Amazon EKS using Docker and Helm charts, with CodePipeline + ArgoCD GitOps and Prometheus/Grafana monitoring.</p>
+        <div class="case-tags"><span>Helm</span><span>CodePipeline</span><span>ArgoCD</span><span>Grafana</span></div>
+        <div class="metric">Zero manual deploys · 40% faster issue detection</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="team">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Four roles, no handoffs.</h2>
-      <p>Everyone works from the same context — nothing gets lost in translation.</p>
-    </div>
-    <div class="team-grid">
-      <div class="member"><div class="role-mark mono">BE</div><h3>Backend Engineering</h3><div class="role">APIs & data</div><p>Builds and maintains the services and databases everything else depends on.</p></div>
-      <div class="member"><div class="role-mark mono">FE</div><h3>Frontend Engineering</h3><div class="role">Web & mobile</div><p>Turns designs into fast, reliable interfaces across web and mobile.</p></div>
-      <div class="member"><div class="role-mark mono">UX</div><h3>UI/UX Design</h3><div class="role">Product design</div><p>Shapes flows and screens around what the end user is actually trying to do.</p></div>
-      <div class="member"><div class="role-mark mono">OP</div><h3>Server & Infrastructure</h3><div class="role">Deployment & uptime</div><p>Keeps servers, deployments and monitoring running quietly in the background.</p></div>
+      <div class="case">
+        <div class="platform mono">FASTAPI · AWS</div>
+        <h3>DevOps Monitoring &amp; AWS Cost Analysis API</h3>
+        <p>Centralized FastAPI platform using psutil for system metrics and boto3 with AWS Cost Explorer for cost tracking.</p>
+        <div class="case-tags"><span>FastAPI</span><span>boto3</span><span>Cost Explorer</span></div>
+        <div class="metric">60% better cost visibility</div>
+      </div>
+      <div class="case">
+        <div class="platform mono">KUBERNETES · HPA</div>
+        <h3>Two-Tier Banking Application</h3>
+        <p>Containerized banking app on EKS with Kubernetes HPA, plus Prometheus and Grafana for real-time monitoring and alerting.</p>
+        <div class="case-tags"><span>Docker</span><span>HPA</span><span>Prometheus</span></div>
+        <div class="metric">80% better horizontal scalability · 40% faster incident response</div>
+      </div>
+      <div class="case">
+        <div class="platform mono">EC2 · AUTO SCALING</div>
+        <h3>Node.js Application on Auto Scaling</h3>
+        <p>EC2 Auto Scaling Groups behind an Elastic Load Balancer, tuned instance types, health checks and scaling policies for peak traffic.</p>
+        <div class="case-tags"><span>EC2</span><span>ASG</span><span>ELB</span></div>
+        <div class="metric">High availability · lower latency</div>
+      </div>
+      <div class="case">
+        <div class="platform mono">FULL STACK · PAYMENTS</div>
+        <h3>University Management System</h3>
+        <p>Full-stack portal covering admissions, results, certificates and exams, with BillDesk payments and role-based access for students, faculty and admins.</p>
+        <div class="case-tags"><span>RBAC</span><span>BillDesk</span><span>Full stack</span></div>
+        <div class="metric">50% less manual processing · 30% faster</div>
+      </div>
+      <div class="case">
+        <div class="platform mono">REACT NATIVE · MOBILE</div>
+        <h3>Doctor Appointment App</h3>
+        <p>Patient-facing mobile app to find doctors by specialty and book appointments, with a dashboard and RTK Query data layer.</p>
+        <div class="case-tags"><span>React Native</span><span>RTK Query</span><span>Booking flow</span></div>
+      </div>
+      <div class="case">
+        <div class="platform mono">NEXT.JS · WEB</div>
+        <h3>Medix Hospital Management</h3>
+        <p>Admin web app for hospital staff with authentication and an operations dashboard, built on Next.js, Bootstrap and RTK Query.</p>
+        <div class="case-tags"><span>Next.js</span><span>Bootstrap</span><span>Admin dashboard</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -271,84 +284,37 @@
 <section>
   <div class="wrap">
     <div class="sec-head">
-      <h2>How an engagement runs.</h2>
-      <p>Same process whether it's a two-day fix or a three-month build.</p>
+      <h2>Education &amp; certification.</h2>
     </div>
-    <div class="process">
-      <div class="step"><div class="n mono">01</div><h3>Scope the problem</h3><p>A short call to understand what's broken or what you're building, and who needs what.</p></div>
-      <div class="step"><div class="n mono">02</div><h3>Assign the team</h3><p>The right mix of support, design, and engineering — not a generic account manager.</p></div>
-      <div class="step"><div class="n mono">03</div><h3>Build & support</h3><p>Work happens in the open, with regular check-ins instead of a black-box handoff.</p></div>
-      <div class="step"><div class="n mono">04</div><h3>Stay on call</h3><p>Retained clients keep the same team on call for whatever comes up next.</p></div>
+    <div class="edu">
+      <h3>Bachelor of Computer Applications</h3>
+      <div class="meta mono">Sri Dev Suman Uttarakhand University, Dehradun · 2017 – 2020</div>
+      <p>Built a Library Management System for the college: 5000+ books, user authentication, issue/return tracking and search.</p>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Common questions before signing on.</h2>
-      <p>The things most clients ask in the first call.</p>
-    </div>
-    <div class="faq-list">
-      <details class="faq-item" open>
-        <summary>Do we need a full-time IT team to work with you?<span class="plus">+</span></summary>
-        <p>No. Most clients use us instead of hiring in-house — you get backend, frontend, design and infra coverage without four separate salaries.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Can you take over an existing product?<span class="plus">+</span></summary>
-        <p>Yes. We regularly step into codebases we didn't build — the first two weeks are spent mapping the system before we touch anything.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What does a retainer actually include?<span class="plus">+</span></summary>
-        <p>Ongoing support hours, monitoring, and priority access to the whole team — engineering and design included, not billed separately.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How fast can you start?<span class="plus">+</span></summary>
-        <p>Support engagements can start within days. Product builds start with a scoping call, usually within a week.</p>
-      </details>
+    <div class="edu" style="margin-top:20px;">
+      <h3>Microsoft Certified: Azure Administrator Associate</h3>
+      <div class="meta mono">In progress</div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>What clients say after the first project.</h2>
-    </div>
-    <div class="quote-grid">
-      <div class="quote">
-        <div><div class="mark">"</div><p class="q">They fixed our server issues in a day, then quietly kept an eye on things without us having to ask.</p></div>
-        <div class="who"><strong>Clinic owner</strong>Healthcare, retained client</div>
-      </div>
-      <div class="quote">
-        <div><div class="mark">"</div><p class="q">Having design and engineering in the same room meant we stopped losing weeks to handoffs between vendors.</p></div>
-        <div class="who"><strong>Product founder</strong>SaaS, project engagement</div>
-      </div>
-      <div class="quote">
-        <div><div class="mark">"</div><p class="q">Support tickets that used to take days now get resolved before we even notice the problem.</p></div>
-        <div class="who"><strong>Operations lead</strong>Retail, retained client</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" style="border-bottom:none;">
+<section id="contact" class="contact" style="border-bottom:none;">
   <div class="wrap contact-inner">
     <div>
-      <h2>Tell us what's breaking, or what you're building.</h2>
-      <p>One message reaches the whole team — support, design, and engineering. We'll reply with next steps, not a sales script.</p>
+      <h2>Have infrastructure to build or fix?</h2>
+      <p>Open to DevOps, cloud and full-stack roles and projects. Send a note and I'll reply with next steps.</p>
     </div>
     <div class="contact-card">
-      <div class="row"><span>Email</span><span>hello@uptimelabs.io</span></div>
-      <div class="row"><span>Response time</span><span>Within 24 hours</span></div>
+      <div class="row"><span>Email</span><span>rajendraakmr@gmail.com</span></div>
+      <div class="row"><span>Phone</span><span>+91-7033262744</span></div>
       <div class="row"><span>Based in</span><span>Kolkata, India</span></div>
-      <div class="row"><span>Engagements</span><span>Retainer or project</span></div>
-      <a class="cta-inline" href="mailto:hello@uptimelabs.io">Email the team</a>
+      <div class="row"><span>Focus</span><span>DevOps · Cloud · Full stack</span></div>
+      <a class="cta-inline" href="mailto:rajendraakmr@gmail.com">Email me</a>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Uptime Labs — IT support & engineering studio.</footer>
+<footer>© 2026 Rajendra Kumar Marandi — DevOps &amp; Software Engineer.</footer>
 
 </body>
 </html>
